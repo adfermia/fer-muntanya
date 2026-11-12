@@ -1,17 +1,20 @@
 <header class="navbar">
   <div class="navbar__container">
+  
+  <a routerLink="/" class="navbar__logo">
+    <img src="/images/logo.svg" alt="Fer Muntanya">
 
-    <a class="navbar__logo" routerLink="/">
-      🏔️ Mountain Guide
-    </a>
+    <span>Fer Muntanya</span>
+  </a>
+  
 
-<button
-  class="navbar__toggle"
-  (click)="toggleMenu()">
+    <button
+      class="navbar__toggle"
+      (click)="toggleMenu()">
 
-  <mat-icon>menu</mat-icon>
+      <mat-icon>menu</mat-icon>
 
-</button>
+    </button>
 
     <nav
       class="navbar__menu"

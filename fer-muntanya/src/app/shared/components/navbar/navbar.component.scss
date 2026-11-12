@@ -3,7 +3,11 @@
   top: 0;
   z-index: 1000;
 
-  background: #2f5d50;
+  background: rgba(47, 93, 80, 0.92);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -11,7 +15,7 @@
   max-width: 1400px;
   margin: 0 auto;
 
-  height: 72px;
+  height: 80px;
   padding: 0 2rem;
 
   display: flex;
@@ -19,17 +23,42 @@
   justify-content: space-between;
 }
 
+/* LOGO */
+
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.75rem;
 
   color: white;
   text-decoration: none;
 
-  font-size: 1.5rem;
-  font-weight: 700;
+  transition: opacity 0.2s ease;
 }
+
+.navbar__logo:hover {
+  opacity: 0.9;
+}
+
+.navbar__logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar__logo:hover img {
+  transform: scale(1.05);
+}
+
+.navbar__logo span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* MENÚ */
 
 .navbar__menu {
   display: flex;
@@ -44,7 +73,7 @@
   text-decoration: none;
   font-weight: 600;
 
-  transition: color .25s ease;
+  transition: color 0.25s ease;
 }
 
 .navbar__menu a:hover {
@@ -55,15 +84,15 @@
   content: '';
 
   position: absolute;
-  bottom: -8px;
   left: 0;
+  bottom: -10px;
 
   width: 0;
   height: 2px;
 
   background: #d1b38a;
 
-  transition: width .25s ease;
+  transition: width 0.25s ease;
 }
 
 .navbar__menu a:hover::after,
@@ -75,13 +104,13 @@
   color: #d1b38a;
 }
 
-/* BOTÓN MÓVIL */
+/* BOTÓN HAMBURGUESA */
 
 .navbar__toggle {
   display: none;
 
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
 
   border: none;
   background: transparent;
@@ -89,13 +118,22 @@
   color: white;
   cursor: pointer;
 
-  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.navbar__toggle:hover {
+  color: #d1b38a;
+}
+
+.navbar__toggle mat-icon {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 /* MÓVIL */
 
 @media (max-width: 768px) {
-
   .navbar__toggle {
     display: flex;
     align-items: center;
@@ -106,18 +144,20 @@
     display: none;
 
     position: absolute;
-
-    top: 72px;
+    top: 80px;
     left: 0;
     right: 0;
 
-    background: #2f5d50;
+    background: rgba(47, 93, 80, 0.98);
+    backdrop-filter: blur(12px);
 
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 0;
 
     padding: 1rem 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .navbar__menu--active {
