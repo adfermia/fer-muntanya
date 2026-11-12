@@ -1,0 +1,48 @@
+.hero {
+  height: calc(100vh - 72px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.4),
+      rgba(0,0,0,.4)
+    ),
+    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b')
+    center/cover;
+
+  color: white;
+  text-align: center;
+}
+
+.hero__content {
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.hero button {
+  background: #8b6b4a;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 1rem 2rem;
+
+  font-size: 1rem;
+  cursor: pointer;
+}

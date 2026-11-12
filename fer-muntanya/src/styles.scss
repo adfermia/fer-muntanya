@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+/* Angular Material Theme */
+
+html {
+  height: 100%;
+
+  @include mat.theme((
+    color: (
+      primary: mat.$green-palette,
+      tertiary: mat.$orange-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+/* Variables globales */
+
+:root {
+  --mountain-green-dark: #2f5d50;
+  --mountain-green: #4e6e58;
+  --mountain-brown: #8b6b4a;
+  --mountain-brown-light: #b8956a;
+  --mountain-cream: #f4f1ea;
+
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color-scheme: light;
+
+  background: var(--mountain-cream);
+  color: var(--text-primary);
+
+  font-family:
+    Inter,
+    Roboto,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Imágenes */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botones */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Contenedor principal */
+
+.container {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+}
+
+/* Títulos */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--mountain-green-dark);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Texto */
+
+p {
+  color: var(--text-secondary);
+}
+
+/* Sections */
+
+section {
+  padding: 5rem 0;
+}
+
+/* Selección de texto */
+
+::selection {
+  background: var(--mountain-green-dark);
+  color: white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mountain-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mountain-green);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mountain-green-dark);
+}

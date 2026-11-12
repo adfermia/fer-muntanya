@@ -1,0 +1,52 @@
+<header class="navbar">
+  <div class="navbar__container">
+
+    <a class="navbar__logo" routerLink="/">
+      🏔️ Mountain Guide
+    </a>
+
+<button
+  class="navbar__toggle"
+  (click)="toggleMenu()">
+
+  <mat-icon>menu</mat-icon>
+
+</button>
+
+    <nav
+      class="navbar__menu"
+      [class.navbar__menu--active]="menuOpen()">
+
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        (click)="closeMenu()">
+        Inicio
+      </a>
+
+      <a
+        routerLink="/actividades"
+        routerLinkActive="active"
+        (click)="closeMenu()">
+        Actividades
+      </a>
+
+      <a
+        routerLink="/blog"
+        routerLinkActive="active"
+        (click)="closeMenu()">
+        Blog
+      </a>
+
+      <a
+        routerLink="/contacto"
+        routerLinkActive="active"
+        (click)="closeMenu()">
+        Contacto
+      </a>
+
+    </nav>
+
+  </div>
+</header>
