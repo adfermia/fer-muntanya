@@ -33,16 +33,52 @@
   margin-bottom: 2rem;
   color: white;
 }
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 
-.hero button {
-  background: #8b6b4a;
-  color: white;
-
-  border: none;
-  border-radius: 8px;
-
+  margin-top: 2rem;
+}
+.btn {
   padding: 1rem 2rem;
 
+  border: none;
+  border-radius: 12px;
+
   font-size: 1rem;
+  font-weight: 600;
+
   cursor: pointer;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #b8956a;
+  color: white;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .25);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
 }

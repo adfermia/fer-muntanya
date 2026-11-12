@@ -1,0 +1,39 @@
+<article class="activity-card">
+
+  <img
+    [src]="activity().imageUrl"
+    [alt]="activity().title">
+
+  <div class="activity-card__content">
+
+    <span class="activity-card__badge">
+      {{ activity().level }}
+    </span>
+
+    <h3>
+      {{ activity().title }}
+    </h3>
+
+    <p>
+      {{ activity().description }}
+    </p>
+
+   <div class="activity-card__footer">
+
+    <span class="activity-card__duration">
+        {{ activity().duration }}
+    </span>
+
+    <a
+        class="activity-card__link"
+        [routerLink]="['/actividades', activity().slug]">
+
+        Más info →
+
+    </a>
+
+</div>
+
+  </div>
+
+</article>

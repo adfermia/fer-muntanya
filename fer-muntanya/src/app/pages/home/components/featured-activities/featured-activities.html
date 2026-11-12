@@ -1,0 +1,34 @@
+<section
+  class="featured-activities"
+  data-aos="fade-up">
+
+  <div class="container">
+
+    <h2>Experiencias destacadas</h2>
+   
+    <p class="featured-activities__subtitle">
+    Descubre algunas de las actividades más demandadas
+    para progresar en escalada y vivir aventuras únicas
+    en montaña.
+    </p>
+
+    <div class="featured-activities__grid">
+
+      @for (activity of activities; track activity.id) {
+
+        <div
+          data-aos="fade-up"
+          [attr.data-aos-delay]="activity.id * 100">
+
+          <app-activity-card
+            [activity]="activity" />
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

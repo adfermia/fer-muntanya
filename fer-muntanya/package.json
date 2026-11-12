@@ -19,6 +19,7 @@
     "@angular/material": "^22.2.7",
     "@angular/platform-browser": "^22.2.0",
     "@angular/router": "^22.2.0",
+    "aos": "^2.3.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -26,6 +27,7 @@
     "@angular/build": "^22.2.6",
     "@angular/cli": "^22.2.6",
     "@angular/compiler-cli": "^22.2.0",
+    "@types/aos": "^3.0.8",
     "jsdom": "^30.0.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
